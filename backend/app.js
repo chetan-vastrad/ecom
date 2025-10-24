@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config({ quiet: true });
+dotenv.config();
 import express from "express";
 import connectToDB from "./config/db.js";
 import cors from "cors";
@@ -49,13 +49,18 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
 // ✅ Serve React frontend (for Render)
-const frontendPath = path.join(__dirname, "../frontend/dist");
-if (fs.existsSync(frontendPath)) {
-  app.use(express.static(frontendPath));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(frontendPath, "index.html"));
-  });
-}
+// const frontendPath = path.join(__dirname, "../frontend/dist");
+// if (fs.existsSync(frontendPath)) {
+//   app.use(express.static(frontendPath));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(frontendPath, "index.html"));
+//   });
+// }
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://${HOST}:${PORT}`);
