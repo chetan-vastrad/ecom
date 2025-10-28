@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../features/auth/authSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import jwtDecode from "jwt-decode"; // ✅ works perfectly with v3.1.2
 
 const Login = () => {
@@ -46,7 +46,7 @@ const Login = () => {
         onSubmit={handleSubmit}
         className="bg-white shadow-lg p-8 rounded-lg w-96"
       >
-        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center text-black">Login</h2>
 
         <input
           className="border p-2 w-full mb-3 text-black"
@@ -73,7 +73,23 @@ const Login = () => {
         >
           {isLoading ? "Logging in..." : "Login"}
         </button>
-
+         <p className="mt-4 text-center text-black">
+          Don't have an account?{" "}
+          <Link
+            to="/register"
+            className="text-blue-600 hover:underline font-medium"
+          >
+            Register
+          </Link>
+        </p>
+        <div className="text-blue-400 text-sm text-center">
+        <p>Admin Login</p>
+        <p>UserName: admingmail.com password: 123456</p>
+        </div>
+        <div className="text-blue-400 text-sm text-center">
+        <p>User Login</p>
+        <p>UserName: test@gmail.com password: 123456</p>
+        </div>
         {isError && <p className="text-red-500 mt-2">{message}</p>}
         {isSuccess && (
           <p className="text-green-600 mt-2">Login successful!</p>

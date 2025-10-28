@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { register, reset } from "../features/auth/authSlice";
-
+import { Link } from "react-router-dom";
 const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -67,7 +67,15 @@ const Register = () => {
         >
           {isLoading ? "Registering..." : "Register"}
         </button>
-
+        <p className="mt-4 text-center text-black">
+          have an account?{" "}
+          <Link
+            to="/login"
+            className="text-blue-600 hover:underline font-medium"
+          >
+            Login Here
+          </Link>
+        </p>
         {isError && <p className="text-red-500 mt-2">{message}</p>}
         {isSuccess && (
           <p className="text-green-600 mt-2">Registered successfully!</p>
