@@ -8,10 +8,10 @@ export const ProductProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    //  const res = await axios.get("http://localhost:8000/api/products");
+    //  const res = await axios.get("https://ecom-qca1.onrender.com/api/products");
     const fetchAllProduct = async () =>{
         try {
-            const res = await axios.get("http://localhost:8000/api/products");
+            const res = await axios.get("https://ecom-qca1.onrender.com/api/products");
             // console.log(res.data.product);
              setAllProducts(res.data.product);
     setFilteredProducts(res.data.product);

@@ -85,7 +85,7 @@ const Cart = () => {
               className="flex bg-white rounded-lg shadow p-4 items-center justify-between"
             >
               <img
-                src={`http://localhost:8000${item.image}`}
+                src={`https://ecom-qca1.onrender.com${item.image}`}
                 alt={item.name}
                 className="w-24 h-24 object-cover rounded"
               />
@@ -243,7 +243,7 @@ const Cart = () => {
             className="flex  rounded-lg shadow p-4 items-center justify-between"
           >
             <img
-              src={`http://localhost:8000${item.image}`}
+              src={`https://ecom-qca1.onrender.com${item.image}`}
               alt={item.name}
               className="w-24 h-24 object-cover rounded"
             />

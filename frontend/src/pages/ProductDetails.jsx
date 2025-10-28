@@ -13,7 +13,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/api/products/${id}`);
+        const res = await axios.get(`https://ecom-qca1.onrender.com/api/products/${id}`);
         console.log("API Response:", res.data);
 
         // ✅ Use the correct key name from your backend
@@ -52,9 +52,9 @@ const ProductDetails = () => {
         {/* Product Image */}
         <div>
           <img
-            src={`http://localhost:8000${product.image}`}
+            src={`https://ecom-qca1.onrender.com${product.image}`}
             alt={product.name}
-            className="w-full  object-contain rounded-lg shadow-md"
+            className="w-full h-96 object-contain rounded-lg shadow-md"
           />
         </div>
 

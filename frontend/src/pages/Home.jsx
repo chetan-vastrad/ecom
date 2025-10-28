@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/products");
+        const res = await axios.get("https://ecom-qca1.onrender.com/api/products");
         setProducts(res.data.product);
       } catch (err) {
         console.error(err);
@@ -64,7 +64,7 @@ const Home = () => {
                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
               >
                 <img
-                  src={`http://localhost:8000${item.image}`}
+                  src={`https://ecom-qca1.onrender.com${item.image}`}
                   alt={item.name}
                   onClick={()=>navigation(`/product/${item._id}`)}
                   className="w-full h-56 object-cover cursor-pointer"

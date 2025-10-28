@@ -80,7 +80,7 @@ const handleDelete = async (id) => {
               className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col"
             >
               <img
-                src={product.image ? `http://localhost:8000${product.image}` : "https://via.placeholder.com/300"}
+                src={product.image ? `https://ecom-qca1.onrender.com${product.image}` : "https://via.placeholder.com/300"}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />

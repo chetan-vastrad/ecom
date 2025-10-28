@@ -50,7 +50,7 @@ const CategoryPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {products.map((p) => (
             <div key={p.id} className="bg-white p-4 rounded-xl shadow-md text-center flex flex-col">
-              <img src={`http://localhost:8000${p.image}`} alt={p.name} className="w-full h-40 object-contain mb-3" />
+              <img src={`https://ecom-qca1.onrender.com${p.image}`} alt={p.name} className="w-full h-40 object-contain mb-3" />
               <h3 className="text-lg font-semibold text-black">{p.name}</h3>
               <h3 className="text-xxl font-semibold text-gray-500 ">{p.description}</h3>
               <p className="text-indigo-600 font-bold mt-2">${p.price}</p>

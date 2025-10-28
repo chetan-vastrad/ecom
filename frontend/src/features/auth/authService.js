@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/api/auth"; // your backend base URL
+const API_URL = "https://ecom-qca1.onrender.com/api/auth"; // your backend base URL
 
 // Register user
 const register = async (userData) => {
