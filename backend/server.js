@@ -22,7 +22,7 @@ const __dirname = path.dirname(__filename);
 // ✅ CORS setup (dev vs prod)
 const corsOptions = {
   origin: [
-    "http://localhost:5173", // local frontend
+    "https://ecom-1-dhs7.onrender.com/", // local frontend
     process.env.FRONTEND_URL || "", // production frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
