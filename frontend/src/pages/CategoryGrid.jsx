@@ -42,7 +42,7 @@ const CategoryGrid = () => {
           640: { slidesPerView: 4 },
           1024: { slidesPerView: 8 },
         }}
-        className="px-10"
+        className=""
       >
         {categories.map((cat) => (
           <SwiperSlide key={cat.id}>
