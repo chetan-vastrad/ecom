@@ -47,7 +47,7 @@ const CategoryPage = () => {
       {products.length === 0 ? (
         <p className="text-gray-500">No products found.</p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {products.map((p) => (
             <div key={p.id} className="bg-white p-4 rounded-xl shadow-md text-center flex flex-col">
               <img src={`https://ecom-qca1.onrender.com${p.image}`} alt={p.name} className="w-full h-40 object-contain mb-3" />
